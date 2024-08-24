@@ -3,7 +3,12 @@
 @tailwind utilities;
 
 /*sign up buttons*/
-
+body{
+  background-color: #F9F7F7;
+}
+.hh{
+  letter-spacing: 2px;
+}
 .enabled-button {
   background-color: #3b82f6; 
   color: white;
@@ -19,7 +24,7 @@
 }
 
 .landing-bg {
-  background-image:linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 0%), url('/landingbg.jpg');
+  background-image:linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.55) 0%), url('/landingbg.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -51,8 +56,9 @@
 }
 .searchbox input{
   font-size: 1.2em;
-  background-color: white;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
-  color: #333;
+  background-color: #004D40;
+  border-bottom: 1px solid #F9F7F7;
+  color: #F9F7F7;
 }
+
 
