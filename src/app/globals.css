@@ -2,32 +2,57 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+/*sign up buttons*/
+
+.enabled-button {
+  background-color: #3b82f6; 
+  color: white;
+  cursor: pointer;
+  
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.disabled-button {
+  background-color: #cccccc;
+  color: #999999;
+  cursor: not-allowed;
+  
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.landing-bg {
+  background-image:linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 0%), url('/landingbg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.li{
+  letter-spacing: 0.2rem;
 }
+.li::before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: #333;
+  bottom: -2px;
+  transform: scaleX(0);
+  transition: transform 0.5s ease-in-out;
+  transform-origin: right;
+
+}
+.li:hover::before{
+  transform: scaleX(1);
+  transform-origin: left;
+}
+.searchbox{
+  padding: 0 30px;
+  transition: 0.5s ease-in-out;
+  right: -100%;
+}
+.searchbox input{
+  font-size: 1.2em;
+  background-color: white;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  color: #333;
+}
+

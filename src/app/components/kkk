@@ -1,0 +1,174 @@
+  {/** */}
+      <div className="">
+        <div className="px-6 mt-4 ">
+
+          {/**background image */}
+        <div className="landing-bg rounded-xl min-h-[450px] md:min-h-[500px]">
+            <div className="flex flex-col justify-center items-center gap-4 md:gap-6 ">
+              <h1 className="text-white text-center text-3xl md:text-5xl font-bold leading-tight tracking-[-0.033em] mt-48 md:mt-56">Find Your Passion, Find Your Purpose</h1>
+
+              <h2 className="text-white font-semibold text-center">
+            Join a platform that connects volunteers with organizations creating positive impact.
+            </h2>
+              
+            </div>
+
+            <div className="hidden md:flex justify-center items-center px-20 sm:px-60 rounded-full mt-6 md:mt-8 ">
+              <input 
+              className="flex-1  md:w-[300px]  py-3 px-3 md:py-4 md:px-4 rounded-l-full outline-none"
+              type="text" />
+              <button
+              className="py-3 px-8 md:py-4 md:px-8 bg-blue-600 rounded-r-full text-white font-semibold"
+              >Search</button>
+            </div>
+
+           
+        </div>
+        {/**smaller screens search */}
+        
+        <div className="md:hidden bg-slate-200 mt-6 rounded-full flex">
+                <input type="text"
+                className="py-2 px-4 bg-transparent flex-1 outline-none"
+                />
+                <button
+                className="py-2 px-3 bg-blue-600 rounded-r-full text-white text-sm font-semibold"
+                >Search</button>
+        </div>
+      </div>
+      {/**next section */}
+     
+          
+          
+          
+        
+
+      {/**CTA */}
+
+
+
+
+
+
+
+
+
+
+
+
+      <nav className="">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-16;
+          ">
+            {/**logo */}
+            <div className="flex items-center">
+              <div className="">
+                <Link href='/'>
+                  <img 
+                  src="/slogo.png" 
+                  alt="logo"
+                  className="h-20 mt-4"
+                  />
+                </Link>
+              </div>
+            </div>
+  
+             {/**search */}
+             <div className="hidden md:block border-2  md:flex-row items-center rounded-full mt-2">
+  
+                <input 
+                type="text" 
+                className="bg-transparent flex-1 px-2 py-3 outline-none"
+                />
+  
+                <button
+                className="bg-blue-600 text-white text-sm font-semibold px-3 py-3 rounded-full"
+                >Search</button>
+             </div>
+  
+            {/**hidden mobile nav */}
+            <div className="hidden md:block">
+              <div className="ml-4 flex items-center space-x-4">
+                <Link href=''
+                className="font-semibold hover:underline"
+                >Find Opportunities
+                </Link>
+                
+                <Link 
+                href='/'
+                className="font-semibold hover:underline"
+                >Blog</Link>
+  
+                <Link href='/login'
+                className="bg-blue-600 px-4 py-2 rounded-full text-white font-semibold"
+                >Log in</Link>
+  
+                {/**<Link href='/signup'>Sign Up</Link> */}
+                
+              </div>
+            </div>
+          {/** desktop nav */}
+          <div className="md:hidden flex items-center">
+            <button
+            className="inline-flex items-center justify-center p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-black"
+            onClick={toggle}
+            >
+              {clicks ? (
+                <svg  className="h-6 w-6"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor" >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+              ):
+              (
+                <svg  className="h-6 w-6"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M4 6h16M4 12h16m-7 6h7"/>
+                </svg>
+              )}
+            </button>
+          </div>
+  
+          </div>
+        </div>
+        {/**mobile nav */}
+       
+        {clicks &&(
+        <div className="md:hidden">
+          <div className=" mt-4 p-4 flex flex-col items-center space-y-4  bg-stone-600  ">
+              <Link href=''
+                className="text-white font-semibold"
+              >Find Opportunities
+              </Link>
+  
+              <Link 
+               className="text-white font-semibold"
+              href='/'>Blog</Link>
+              
+              <Link 
+               className="text-white font-semibold"
+              href='/login'
+              
+              >Log in</Link>
+              {/*<Link 
+              href='/signup'
+              
+              >Sign Up</Link>* */}
+              
+          </div>
+        </div>
+      )}
+      </nav>
+       
