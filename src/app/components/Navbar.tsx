@@ -44,13 +44,13 @@ export default function Navbar() {
 
             <li><Link 
             className="li relative  text-[#F9F7F7]  " 
-            href='/'>Find Opportunties</Link></li>
+            href='/'>Events</Link></li>
 
             <li><Link className=" li relative text-[#F9F7F7]" href='/'>Blog</Link></li>
 
             <li><Link className="li relative text-[#F9F7F7]" href='/'>Contact</Link></li>
 
-            <li><Link className="li relative text-[#F9F7F7]" href='/'>Profile</Link></li>
+            <li><Link className="li relative text-[#F9F7F7] " href='/login'>Log in</Link></li>
           </ul>
 
           
@@ -137,19 +137,19 @@ export default function Navbar() {
       </nav>
 
 
-      <div className={`mobile-nav fixed top-[80px] left-0 w-full h-full bg-white shadow-lg z-10 transform transition-transform duration-500 ease-in-out ${clicks ? 'translate-x-0' : '-translate-x-full'}`}>
+      <div className={`mobile-nav fixed top-[80px] left-0 w-full h-full md:hidden bg-white shadow-lg z-20 transform transition-transform duration-500 ease-in-out ${clicks ? 'translate-x-0' : '-translate-x-full'}`}>
 
       <ul className="flex flex-col justify-center p-10 items-center gap-6">
 
-        <li><Link 
-        className="li relative text-[16px]  " 
-        href='/'>Find Opportunties</Link></li>
+        <li ><Link 
+        className="li mob relative text-[16px]  " 
+        href='/'>Events</Link></li>
 
-        <li><Link className=" li relative" href='/'>Blog</Link></li>
+        <li ><Link className=" li mob relative" href='/'>Blog</Link></li>
 
-        <li><Link className="li relative" href='/'>Contact</Link></li>
+        <li><Link className="li mob relative" href='/'>Contact</Link></li>
 
-        <li><Link className="li relative" href='/'>Profile</Link></li>
+        <li><Link className="li mob relative" href='/login'>Log in</Link></li>
       </ul>
 
       </div>
