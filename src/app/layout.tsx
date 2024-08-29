@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { Toaster } from 'react-hot-toast'; 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebookF, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import {faMagnifyingGlass, faHandshake, faChartLine} from '@fortawesome/free-solid-svg-icons'
 //import Navbar from "./components/Navbar";
 
 
@@ -20,10 +24,21 @@ export default function RootLayout({
     <html lang="en">
 
       <body className={inter.className}>
-        
-        
-        {children}
+        {children}   
+        <Toaster />
       </body>
+      {/**
+       * <footer className="py-10 bg-[#333333] text-center">
+        <p className="text-[#F9F7F7]">© 2024 Volunta. All rights reserved.</p>
+        <div className="mt-4 flex justify-center gap-6">
+          <a href="#"><FontAwesomeIcon  className="text-[#FF6F61] w-[25px] h-[25px]" icon={faFacebookF} /></a>
+          <a href="#"><FontAwesomeIcon  className="text-[#FF6F61]   w-[25px] h-[25px]" icon={faTwitter} /></a>
+          <a href="#"><FontAwesomeIcon  className="text-[#FF6F61]  w-[25px] h-[25px]" icon={faInstagram} /></a>
+          
+        </div>
+      </footer>
+       */}
+      
     </html>
   );
 }

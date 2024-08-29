@@ -50,7 +50,7 @@ export default function Navbar() {
 
             <li><Link className="li relative text-[#F9F7F7]" href='/'>Contact</Link></li>
 
-            <li><Link className="li relative text-[#F9F7F7] " href='/login'>Log in</Link></li>
+            <li><Link className="li relative text-[#F9F7F7] " href='/login'>Sign in</Link></li>
           </ul>
 
           
@@ -149,7 +149,7 @@ export default function Navbar() {
 
         <li><Link className="li mob relative" href='/'>Contact</Link></li>
 
-        <li><Link className="li mob relative" href='/login'>Log in</Link></li>
+        <li><Link className="li mob relative" href='/login'>Sign in</Link></li>
       </ul>
 
       </div>
