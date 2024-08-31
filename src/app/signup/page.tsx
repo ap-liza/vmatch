@@ -7,6 +7,7 @@ import toast from "react-hot-toast";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import {faEye, faEyeSlash} from '@fortawesome/free-solid-svg-icons'
+import { ThreeDots } from "react-loader-spinner";
 
 
 export default function SignUp(){
@@ -84,7 +85,22 @@ const togglePassword =()=>{
             
             <div className="flex  max-w-lg w-11/2 min-h-[500px] bg-white place-self-center mx-auto rounded-[40px] flex-col p-10 gap-6">
 
-                <h1 className="text-center text-xl pb-4 text-[#004D40] font-semibold">{loading ? 'Please wait...': 'Sign Up'}</h1>
+            <h1 className="text-center text-xl pb-4 text-[#004D40] font-semibold flex justify-center items-center">
+                    {loading ? (
+                        <ThreeDots
+                            visible={true}
+                            height="80"
+                            width="80"
+                            color="#4fa94d"
+                            radius="9"
+                            ariaLabel="three-dots-loading"
+                            wrapperStyle={{}}
+                            wrapperClass=""
+                        />
+                    ) : (
+                        'Sign Up'
+                    )}
+                </h1>
 
 
 {/**Div for first and last name to make to flex*/}
