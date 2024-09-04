@@ -8,12 +8,14 @@ import { useEffect, useState } from "react"
 
 
 
+
 //use useEffect later
 export default function Profile(){
 
     const router = useRouter()
     const [user, setUser] = useState('')
     const [userName, setUserName] = useState('')
+    
     const logout =async ()=>{
         try{
 

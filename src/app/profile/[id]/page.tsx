@@ -1,9 +1,14 @@
-export default function userProfile({params}:any){
-    return(
-        <div>
-            <h1>Profile</h1>
-            <hr />
-            <p>Profile Page {params.id}</p>
-        </div>
-    )
+'use client'
+
+import DashboardLay from '../../components/Dashboardlay'
+
+ // Adjust path as needed
+import UserProfile from './UserProfile'
+
+export default function ProfilePage({ params }: { params: { id: string } }) {
+    return (
+        <DashboardLay>
+            <UserProfile params={params} />
+        </DashboardLay>
+    );
 }
