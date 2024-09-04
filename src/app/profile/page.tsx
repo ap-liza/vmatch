@@ -56,7 +56,7 @@ export default function Profile(){
     return(
         <div className="flex flex-col gap-4 p-4">
             <h1>Profile</h1>
-            <h2>WELCOME {userName}</h2>
+            <h1>WELCOME {userName}</h1>
             <h2>{user === '' ? 'Yet to load id' : 
                 <Link href={`/profile/${user}`}>{user}</Link>}
                 </h2>
