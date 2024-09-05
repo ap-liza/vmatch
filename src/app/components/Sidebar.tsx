@@ -55,7 +55,27 @@ const Sidebar: React.FC<SidebarProps> = ({ children }) => {
             toast.error(error.message)
         }
     }
-  
+    
+    //get user's name
+    const [userName, setUserName] = useState('')
+    const getUserName = async () => {
+        try {
+            const res = await axios.get('/api/users/user1')
+            console.log(res.data)
+            const { _id, username } = res.data.data
+            setUserName(res.data.data.firstName)
+        } catch (error: any) {
+            console.error('Failed to fetch user details:', error.message)
+            toast.error('Failed to load user details')
+        }
+    }
+
+    useEffect(() => {
+        getUserName() // Fetch user details on component mount
+    }, [])
+
+
+
   return (
     <div className="flex min-h-screen">
        
@@ -79,7 +99,7 @@ const Sidebar: React.FC<SidebarProps> = ({ children }) => {
             />
           </div>
           {/**info */}
-          <span className="font-semibold text-[12px] md:text-[15px] uppercase">User Name</span>
+          <span className="font-semibold text-[12px] md:text-[15px] uppercase">{userName}</span>
         </div>
 
         {/**nav links for the dashboard */}
